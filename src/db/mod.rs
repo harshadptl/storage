@@ -3,7 +3,7 @@ mod rocks_db;
 mod temp_db;
 mod temp_db_rocks;
 
-use fmerk::{rocksdb, BatchEntry, Op};
+use merk::{rocksdb, BatchEntry, Op};
 pub use merk_db::{FinDB, MerkleDB};
 pub use rocks_db::RocksDB;
 pub use temp_db::TempFinDB;
