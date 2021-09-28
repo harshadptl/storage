@@ -1,5 +1,5 @@
 use crate::db::{to_batch, DBIter, IterOrder, KVBatch, KValue};
-use fmerk::{rocksdb, tree::Tree, Merk};
+use merk::{rocksdb, tree::Tree, Merk};
 use ruc::*;
 use std::path::Path;
 
