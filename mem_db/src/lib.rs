@@ -155,10 +155,6 @@ impl MerkleDB for MemoryDB {
             self.aux
                 .insert(k.into_boxed_slice(), v.map(|v| v.into_boxed_slice()));
         }
-        if flush {
-            let bytes = bincode::serialize(self).map_err(|_e| eg!("serialize failure"))?;
-            std::fs::write(&self.temp, bytes).map_err(|_e| eg!("write file failure"))?;
-        }
         Ok(())
     }
 
